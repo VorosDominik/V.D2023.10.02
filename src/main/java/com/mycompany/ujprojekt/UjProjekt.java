@@ -14,38 +14,41 @@ public class UjProjekt {
 
   
    
-    static public String[] tomb;
+    static public String[] tomb= new String[21];
     public static void main(String[] args) {
+        
+        
         jatek();
     }
 
     private static void jatek() {
-        for (int i = 0; i < 2; i++) {
-             keveres();
-        }
+        tombfeltoltes();
+        System.out.println( "a tomb 1 es eleme:"+tomb[1]);
+      //  for (int i = 0; i < 2; i++) {
+      //       keveres();
+      //  }
    
-    ezvolt();
+    //ezvolt();
     }
 
     private static void keveres() {
     int oszlop = valasztas();
-        if (oszlop==1) {
-            for (int i = 0; i < tomb.length; i++) {
-               // tomb[i] = 20-(i-1)*3;
-            }
-            
-        }
-        else if (oszlop==2) {
-            for (int i = 0; i < tomb.length; i++) {
-                //tomb[i] = 19 - (i-1)*3;
-            }
-        }
-        else if (oszlop==3) {
-            for (int i = 0; i < tomb.length; i++) {
-            //    tomb[i] = 21 - (i-1)*3;
-            }
-        }else{
-            System.out.println("hibás oszlopot választotál nem fog történi semmi!");
+        switch (oszlop) {
+            case 1:
+                for (int i = 0; i < tomb.length; i++) {
+                    // tomb[i] = 20-(i-1)*3;
+                }   break;
+            case 2:
+                for (int i = 0; i < tomb.length; i++) {
+                    //tomb[i] = 19 - (i-1)*3;
+                }   break;
+            case 3:
+                for (int i = 0; i < tomb.length; i++) {
+                    //    tomb[i] = 21 - (i-1)*3;
+                }   break;
+            default:
+                System.out.println("hibás oszlopot választotál nem fog történi semmi!");
+                break;
         }
         
         
@@ -65,4 +68,17 @@ public class UjProjekt {
          
          return oszlop;
      }
+
+    private static void tombfeltoltes() {
+    String[] szin={"P","S","z"};
+    String[] érték={"kir","dam","jum","X","IX","IIX"};
+    int i =0;
+        for (String string : szin) {
+            
+            for (String string1 : érték) {
+                i++;
+                tomb[i]=szin+"_"+érték;
+            }
+        }
+    }
 }
