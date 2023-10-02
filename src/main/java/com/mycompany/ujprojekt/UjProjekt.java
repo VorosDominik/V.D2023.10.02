@@ -75,11 +75,17 @@ public class UjProjekt {
     String[] szin={"P","S","z"};
     String[] érték={"kir","dam","jum","X","IX","IIX"};
     int i =0;
+    int fixal=0;
         for (String szina : szin) {
-            
+            fixal++;
             for (String erteka : érték) {
                 i++;
                 tomb[i]=szina+"_"+erteka;
+            }
+            if (fixal==3) {
+                for (int j = 0; j < 3; j++) {
+                    tomb[i]=szina+"_"+érték[3];
+                }
             }
         }
     }
