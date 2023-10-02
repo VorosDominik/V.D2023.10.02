@@ -30,15 +30,20 @@ public class UjProjekt {
     private static void keveres() {
     int oszlop = valasztas();
         if (oszlop==1) {
-            for (String string : tomb) {
-                
+            for (int i = 0; i < tomb.length; i++) {
+               // tomb[i] = 20-(i-1)*3;
             }
+            
         }
         else if (oszlop==2) {
-            
+            for (int i = 0; i < tomb.length; i++) {
+                //tomb[i] = 19 - (i-1)*3;
+            }
         }
         else if (oszlop==3) {
-            
+            for (int i = 0; i < tomb.length; i++) {
+            //    tomb[i] = 21 - (i-1)*3;
+            }
         }else{
             System.out.println("hibás oszlopot választotál nem fog történi semmi!");
         }
